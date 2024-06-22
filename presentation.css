@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+
+:root {
+  --background-color-light: #f5f5f5;
+  --text-color: #333;
+  --highlight-color: #007bff;
+  --font-family: "Quicksand", sans-serif;
+}
+
+body {
+  padding: 0 5em;
+  background-color: var(--background-color-light);
+  overflow-x: hidden;
+  font-family: var(--font-family);
+}
+
+/**** Logo ****/
+
+.logo-black {
+  margin-top: 40px;
+  margin-left: 10px;
+  width: 100px;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+  position: absolute;
+  z-index: 2;
+}
+
+.logo-black:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+/**** Texte défilant ****/
+
+.moving-text {
+  display: block;
+  position: absolute;
+  top: 5vh;
+  right: 0;
+  left: 0;
+  z-index: -2;
+  transform: perspective(30vw) rotateY(15deg) rotate(8deg);
+  opacity: 0.9;
+}
+
+.moving-wrapper {
+  font-size: 4rem;
+  position: relative;
+  width: 100vw;
+  height: 5rem;
+}
+
+.moving {
+  display: inline-block;
+  white-space: nowrap;
+  width: 200%;
+  text-transform: uppercase;
+  word-spacing: 0.5em;
+  font-family: monospace;
+}
+
+.moving-left {
+  animation: scrollLeft 20s linear infinite;
+}
+
+.moving-right {
+  animation: scrollRight 12s linear infinite;
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes scrollRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/**** Cadre photo ****/
+
+.about-intro-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.myphoto {
+  width: 50%;
+  margin-left: 8em;
+}
+
+.moi {
+  width: 50%;
+}
+
+.content > p {
+  max-width: 700px;
+  line-height: 1.9rem;
+}
+
+/**** Parcours ****/
+
+.parcours {
+  margin-top: 7em;
+  line-height: 1.9rem;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.back-to-top img {
+  width: 100%;
+  height: auto;
+}
+
+/* Faire apparaître la flèche lorsque vous faites défiler vers le bas */
+.show-back-to-top {
+  width: 100%;
+  display: flex;
+  opacity: 1;
+}
+
+.skills {
+  display: flex;
+  gap: 2em;
+}
+
+.skills > img {
+  width: 5em;
+}
