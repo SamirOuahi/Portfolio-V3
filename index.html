@@ -19,31 +19,19 @@
       
   </div>
       <div class="header-container">
-        <a href="#">
-          <img class="logo-black"
-          src="/Images/Noir/Logo_noir_without_background-removebg-preview.png"
-          alt="Logo noir de Samir Ouahi"/>
-        </a>        
+              
         <nav class="navbar">
-          <div class="nav-container">
-            <input
-              class="checkbox"
-              type="checkbox"
-              id="checkbox"
-              aria-label="Ouvrir le menu"
-            />
-            <div class="hamburger-lines" aria-hidden="true">
-              <span class="line line1"></span>
-              <span class="line line2"></span>
-              <span class="line line3"></span>
-            </div>
+          <div class="nav-container">            
             <div class="menu-items">
-              <img
-                class="logo-white"
-                src="/Images/Noir/White.png"
-                alt="Logo blanc de Samir Ouahi"
-              />
+              <a href="index.html">
+                <img
+                  class="logo-white"
+                  src="/Images/Noir/White.png"
+                  alt="Logo noir de Samir Ouahi"
+                />
+              </a>
               <ul class="menu-list">
+                <li class="navprojets"><a class="links" href="#services">Mes services</a></li>
                 <li class="navprojets"><a class="links" href="/pages-creations.html">Mes créations</a></li>
                 <li class="navpropos"><a class="links" href="/presentation.html">À propos</a></li>
                 <li class="navcontact"><a class="links" href="mailto:ouahi.samir37@gmail.com">Me contacter</a></li>
@@ -53,16 +41,21 @@
         </nav>
         
       </div>
-      <video class="video-background" autoplay loop muted>
-        <source src="/Images/test1.mp4" type="video/mp4">
-    </video>
-    <div class="container-title">
-      <div class="creations">BONJOUR</div>
-      <div class="subtitle">
-        <div class="my-creations">MES BONJOUR</div>
-        <div class="small-creations">BONJOUR</div>
+      <div class="container">
+        <img class="img-background" src="/Images/bg_01.jpg" alt="Devices Mockup">
+        <div class="centered-text">
+          <P class="samir">Samir OUAHI</P>
+            <P class="dev">DEVELOPPEUR INFORMATIQUE INDEPENDANT
+            </P>          
+        </div>
+        <a href="#services" class="scroll-down">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 16L6 10L7.41 8.59L12 13.17L16.59 8.59L18 10L12 16Z" fill="currentColor"/>
+          </svg>
+        </a>
       </div>
     </div>
+    
     <!-- <div class="content">
       <div class="miros">
         <h1>Bienvenue !</h1>
@@ -75,7 +68,7 @@
     
     </header>
     <main>
-      <section class="zoom-fade-in">
+      <!-- <section class="zoom-fade-in"> -->
       <!-- <div class="accroche"><p>
         Bienvenue sur mon portfolio ! <br />
         Vous pouvez voir mes plus belles <a class="qui-je-suis" href="pages-creations.html">créations</a> et découvrir
@@ -110,6 +103,61 @@
           </p>
         </div>
       </div> -->
+      
+
+      <section id="services" class="services">
+        <div class="container-title">
+          <div class="creations">SERVICES</div>
+          <div class="subtitle">
+            <div class="my-creations">MES SERVICES</div>
+            <div class="small-creations">SERVICES</div>
+          </div>
+        </div>
+        <div class="presentation-block2">
+          <p>Je propose une large gamme de services pour vous aider à établir et renforcer votre présence en ligne :
+            <ul>
+              <li><span class="gras">Conception et Développement de Sites Web :</span> Que vous ayez besoin d'un site vitrine, d'un blog ou d'une boutique en ligne, je crée des sites sur mesure, réactifs et optimisés pour tous les appareils.</li>
+              <li><span class="gras">Intégration Web :</span> Je convertis vos designs en sites web entièrement fonctionnels, en respectant les meilleures pratiques du secteur.</li>
+              <li><span class="gras">Maintenance et Support Technique :</span> Je m'assure que votre site reste performant et sécurisé grâce à des mises à jour régulières et un support technique réactif.</li>
+            </ul>
+          </p>          
+        </div>
+<div class="services-container">
+  <div class="services-box">
+    <i class="fas fa-desktop fa-4x custom-color"></i>
+    <p>Multi - Platefromes</p>
+    <div class="text-hover">Compatible tous supports, desktop, tablette & mobile</div>
+  </div>
+  <div class="services-box">
+    <i class="fas fa-code fa-4x custom-color"></i>
+    <p>Développement web</p>
+    <div class="text-hover">Création de site web sur-mesure repondant aux besoins des clients</div>
+  </div>
+  <div class="services-box">
+    <i class="fab fa-sketch fa-4x custom-color"></i>
+    <p>Projets web</p>
+    <div class="text-hover">Landing page, site vitrine, e-commerce, intranet, application web & mobile</div>
+  </div>
+  <div class="services-box">
+    <i class="fas fa-bullseye fa-4x custom-color"></i>
+    <p>Référencement</p>
+    <div class="text-hover">CMS | Framework, code optimisé pour le référencement naturel</div>
+  </div>
+  <div class="services-box">
+    <i class="far fa-handshake fa-4x custom-color"></i>
+    <p>Accompagnement</p>
+    <div class="text-hover">Je gère entièrement les projets en assurant une communication constante</div>
+  </div>
+  <div class="services-box">
+    <i class="fas fa-rocket fa-4x custom-color"></i>
+    <p>Maintenance web</p>
+    <div class="text-hover">Gestion d'hébérgement, garanti d'accessibilité, intégration régulière des mises à jour de sécurité</div>
+  </div>
+</div>
+
+</div>
+<div class="trait"></div>
+      </section>
       <section class="projets">
         <div class="container-title">
           <div class="creations">CREATIONS</div>
@@ -182,67 +230,13 @@
         </div>
         <a class="details" href="pages-creations.html">voir + de créations</a>
       </section>
-
-      <section class="services">
-        <div class="container-title">
-          <div class="creations">SERVICES</div>
-          <div class="subtitle">
-            <div class="my-creations">MES SERVICES</div>
-            <div class="small-creations">SERVICES</div>
-          </div>
-        </div>
-<div class="services-container">
-  <div class="services-box">
-    <i class="fas fa-desktop fa-4x custom-color"></i>
-    <p>Multi - Platefromes</p>
-    <div class="text-hover">Compatible tous supports, desktop, tablette & mobile</div>
-  </div>
-  <div class="services-box">
-    <i class="fas fa-code fa-4x custom-color"></i>
-    <p>Développement web</p>
-    <div class="text-hover">Création de site web sur-mesure repondant aux besoins des clients</div>
-  </div>
-  <div class="services-box">
-    <i class="fab fa-sketch fa-4x custom-color"></i>
-    <p>Projets web</p>
-    <div class="text-hover">Landing page, site vitrine, e-commerce, intranet, application web & mobile</div>
-  </div>
-  <div class="services-box">
-    <i class="fas fa-bullseye fa-4x custom-color"></i>
-    <p>Référencement</p>
-    <div class="text-hover">CMS | Framework, code optimisé pour le référencement naturel</div>
-  </div>
-  <div class="services-box">
-    <i class="far fa-handshake fa-4x custom-color"></i>
-    <p>Accompagnement</p>
-    <div class="text-hover">Je gère entièrement les projets en assurant une communication constante</div>
-  </div>
-  <div class="services-box">
-    <i class="fas fa-rocket fa-4x custom-color"></i>
-    <p>Maintenance web</p>
-    <div class="text-hover">Gestion d'hébérgement, garanti d'accessibilité, intégration régulière des mises à jour de sécurité</div>
-  </div>
-</div>
-
-</div>
-      </section>
          
     <section class="h1-effet2">
         <div class="presentation">
           <div class="presentation-block1">
-            <h2>Qui suis-je ?</h2>
+            <h2>A propos</h2>
             <p>Bonjour ! <br>Je suis Samir Ouahi, développeur web freelance passionné par la création de sites internet innovants et fonctionnels. Avec plusieurs années d'expérience dans le domaine, je transforme vos idées en réadivtés digitales captivantes et efficaces.</p>
             <a class="details" href="presentation.html">En savoir +</a>
-          </div>
-          <div class="presentation-block2">
-            <h2>Mes services</h2>
-            <p>En tant que développeur freelance, je propose une large gamme de services pour vous aider à établir et renforcer votre présence en ligne :
-              <ul>
-                <li>Conception et Développement de Sites Web : Que vous ayez besoin d'un site vitrine, d'un blog ou d'une boutique en ligne, je crée des sites sur mesure, réactifs et optimisés pour tous les appareils.</li>
-                <li>Intégration Web : Je convertis vos designs en sites web entièrement fonctionnels, en respectant les meilleures pratiques du secteur.</li>
-                <li>Maintenance et Support Technique : Je m'assure que votre site reste performant et sécurisé grâce à des mises à jour régulières et un support technique réactif.</li>
-              </ul>
-            </p>
           </div>
           <div class="presentation-block3">
             <h2>Pourquoi me faire confiance ?</h2>

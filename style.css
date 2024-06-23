@@ -8,23 +8,22 @@
 
 body {
   margin: 0;
-  /* padding: 0 5em; */
   background-color: var(--background-color-light);
   overflow-x: hidden;
   font-family: quicksand;
   box-sizing: border-box;
 }
 
-/***************------------HOMEPAGE------------***************/
-
-/* Masquer le contenu principal jusqu'à ce que la page soit chargée */
-body.loading main {
-  display: none;
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Ensures the container takes the full viewport height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/*************************************** HEADER ***************************************/
-
-.video-background {
+.img-background {
   position: absolute;
   top: 0;
   left: 0;
@@ -32,57 +31,93 @@ body.loading main {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  animation: zoomIn 10s infinite linear;
 }
 
-.content {
-  position: relative;
-  z-index: 1;
-  display: flex;
-  text-align: center;
-  font-family: Arial, sans-serif;
-  flex-direction: column;
-  align-items: flex-start;
-  /* margin-left: 5em; */
-  top: 50px;
+@keyframes zoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.2); /* Adjust this value for more or less zoom */
+  }
+}
 
-  h1 {
+.centered-text {
+  position: absolute;
+  width: 65%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 3em;
+  color: rgb(255, 255, 255);
+
+  /* background-color: rgba(255, 255, 255, 0.5); */
+  border-radius: 5px;
+  padding: 0.5em;
+  /* border: solid 1px black; */
+
+  p {
     margin: 0;
   }
 }
 
-.miros {
-  background: rgba(255, 255, 255, 0.5);
+.samir {
+  font-size: 0.5em;
+}
+
+.dev {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 .header-container {
   position: relative;
   display: flex;
-  top: 20px;
-  left: 20px;
-  margin-right: auto;
+}
+
+.scroll-down {
+  position: absolute;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2em; /* Adjust size as needed */
+  color: black; /* Adjust color as needed */
+  text-decoration: none;
+  animation: bounce 2s infinite;
+  cursor: pointer;
+  color: white;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 /**** Logo ****/
 
-.logo-black {
-  margin-top: 40px;
-  margin-left: 10px;
-  width: 100px;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-}
-
-.logo-black:hover {
-  transform: scale(1.1);
-  cursor: pointer;
-}
-
 .logo-white {
-  margin-left: 10px;
+  margin-left: 1em;
   width: 100px;
   font-size: 1.5rem;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  display: flex;
+}
+
+.logo-white:hover {
+  color: #000000;
+  cursor: pointer;
 }
 
 /**** Cadre principal de la navbar ****/
@@ -107,28 +142,15 @@ body.loading main {
 .navbar .menu-items {
   display: flex;
   box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.089);
-  background-color: #000000;
+  background-color: rgba(255, 255, 255, 0.2);
   height: 80px;
   width: 100%;
-  transform: translateX(150%);
-  margin-right: -40px;
-  padding-right: 50px;
-  transition: transform 1s ease-in-out;
   align-items: center;
-}
-
-.navbar .nav-container li {
-  list-style: none;
-  font-size: 1.5rem;
-  font-weight: 500;
-  opacity: 0;
-  transform: translateY(10px);
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 }
 
 .navbar .nav-container a {
   text-decoration: none;
-  color: white;
+  color: rgb(255, 255, 255);
   font-weight: 500;
   font-size: 1.6rem;
   padding: 0.7rem;
@@ -139,55 +161,6 @@ body.loading main {
   flex-direction: row;
 }
 
-/**** Hamburger Button ****/
-
-.nav-container .checkbox {
-  position: absolute;
-  display: block;
-  height: 32px;
-  width: 32px;
-  top: 20px;
-  right: 50px;
-  z-index: 5;
-  opacity: 0;
-  cursor: pointer;
-}
-
-.nav-container .hamburger-lines {
-  display: block;
-  height: 26px;
-  width: 32px;
-  position: absolute;
-  top: 17px;
-  right: 50px;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.nav-container .hamburger-lines .line {
-  display: block;
-  height: 4px;
-  width: 100%;
-  border-radius: 10px;
-  background: #0e2431;
-}
-
-.nav-container .hamburger-lines .line1 {
-  transform-origin: 100% 0%;
-  transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
-}
-
-.nav-container .hamburger-lines .line2 {
-  transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
-}
-
-.nav-container .hamburger-lines .line3 {
-  transform-origin: 100% 100%;
-  transition: transform 0.4s ease-in-out, background-color 0.4s ease-in-out;
-}
-
 /**** Menu Items ****/
 
 ul {
@@ -195,48 +168,6 @@ ul {
   display: flex;
   justify-content: space-around;
   align-items: center;
-}
-
-.nav-container input[type="checkbox"]:checked ~ .menu-items {
-  transform: translateX(0);
-}
-
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line1 {
-  transform: rotate(-45deg);
-  background-color: white;
-}
-
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line2 {
-  transform: scaleY(0);
-  background-color: white;
-}
-
-.nav-container input[type="checkbox"]:checked ~ .hamburger-lines .line3 {
-  transform: rotate(45deg);
-  background-color: white;
-}
-
-.nav-container input[type="checkbox"]:checked ~ .menu-items .logo-white {
-  opacity: 1;
-  transition-delay: 0.7s;
-}
-
-.nav-container input[type="checkbox"]:checked ~ .menu-items .navprojets {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 0.8s;
-}
-
-.nav-container input[type="checkbox"]:checked ~ .menu-items .navpropos {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 1.2s;
-}
-
-.nav-container input[type="checkbox"]:checked ~ .menu-items .navcontact {
-  opacity: 1;
-  transform: translateY(0);
-  transition-delay: 1.6s;
 }
 
 /**** Souligne les liens du menu ****/
@@ -392,6 +323,12 @@ h1 {
 
 /* Mes projets */
 
+.trait {
+  width: 45%;
+  margin: 6em auto;
+  border: solid 2px lightgray;
+}
+
 .lettre-E {
   color: #385b81;
 }
@@ -425,8 +362,6 @@ ul {
 /* Conteneur principal */
 .projets {
   width: 100%;
-  margin-top: 13em;
-  padding: 20px;
   box-sizing: border-box;
 }
 
@@ -544,7 +479,7 @@ ul {
 /***********Mes services***********/
 
 .container-title {
-  margin-top: 15em;
+  margin-top: 5em;
   margin-bottom: 2em;
   width: 100%;
   height: 5em;
@@ -588,6 +523,51 @@ ul {
   font-weight: bold;
 
   /* background-color: blanchedalmond; */
+}
+
+.presentation-block2 {
+  width: 100%;
+  height: 100%;
+  font-family: quicksand;
+  text-align: center;
+  margin-top: 4em;
+  margin-bottom: 5em;
+}
+
+.presentation-block2 > p {
+  padding: 0 1em 0 0;
+  line-height: 1.5em;
+}
+
+.presentation-block2 > li {
+  list-style: none;
+  line-height: 1.5em;
+}
+
+.gras {
+  font-weight: bold;
+}
+
+.texte-welcome {
+  width: 100%;
+  height: 5em;
+  /* background-color: brown; */
+  display: flex;
+}
+
+.description {
+  width: 55%;
+  height: 100%;
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgb(234, 234, 234);
+  margin-right: 0.3em;
+  font-family: Montserrat;
+  font-weight: bold;
+  text-transform: uppercase;
+  /* background-color: yellow; */
 }
 
 .services {
@@ -696,22 +676,6 @@ ul {
 
 .presentation-block1 > p {
   padding: 0 1em 0 0;
-  line-height: 1.5em;
-}
-
-.presentation-block2 {
-  width: 50%;
-  height: 100%;
-  font-family: quicksand;
-}
-
-.presentation-block2 > p {
-  padding: 0 1em 0 0;
-  line-height: 1.5em;
-}
-
-.presentation-block2 > li {
-  list-style: none;
   line-height: 1.5em;
 }
 
