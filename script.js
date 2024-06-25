@@ -130,3 +130,12 @@ window.addEventListener("scroll", activateAnimations);
 
 // Activation initiale au chargement de la page
 activateAnimations();
+
+document.querySelectorAll(".scroll-down, .links").forEach(function (element) {
+  element.addEventListener("click", function (event) {
+    event.preventDefault();
+    document.querySelector(this.getAttribute("href")).scrollIntoView({
+      behavior: "smooth",
+    });
+  });
+});
