@@ -247,6 +247,8 @@ body {
 .disclaimer {
   text-align: center;
   margin-top: 20px;
+  margin-left: 2em;
+  margin-right: 2em;
 }
 
 .disclaimer p {
