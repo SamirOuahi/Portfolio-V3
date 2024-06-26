@@ -883,6 +883,28 @@ ul {
   border-radius: 50%;
 }
 
+.a-propos-moi-img:hover {
+  transform: scale(1.1);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.a-propos-moi-img-bis {
+  width: 150px;
+  height: 150px;
+  margin-top: 1em;
+  padding-bottom: 2em;
+  display: flex;
+  /* border: 1px solid black; */
+  border-radius: 50%;
+}
+
+.a-propos-moi-img-bis:hover {
+  transform: scale(1.1);
+  transition: 0.1s;
+  cursor: pointer;
+}
+
 /**************Tarifs**************/
 
 .tarifs-container {
@@ -906,6 +928,33 @@ ul {
   font-weight: bold;
   color: #5b5963;
   position: relative;
+}
+
+/**************Contact**************/
+
+.contact-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5em;
+}
+
+.contact-form-left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact-form-right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /*************************************** FOOTER ***************************************/

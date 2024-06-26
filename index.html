@@ -10,7 +10,6 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link href="./dist/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 
   </head>
   <body>
@@ -32,7 +31,7 @@
               </a>
               <ul class="menu-list">
                 <li class="navprojets"><a class="links" href="#services">Mes services</a></li>
-                <li class="navprojets"><a class="links" href="/pages-creations.html">Mes créations</a></li>
+                <li class="navprojets"><a class="links" href="#creations">Mes créations</a></li>
                 <li class="navpropos"><a class="links" href="#apropos">À propos</a></li>
                 <li class="navpropos"><a class="links" href="#tarifs">Tarifs</a></li>
                 <li class="navcontact"><a class="links" href="mailto:ouahi.samir37@gmail.com">Me contacter</a></li>
@@ -130,7 +129,7 @@
 </div>
 <div class="trait"></div>
       </section>
-      <section class="projets">
+      <section class="projets" id="creations">
         <div class="container-title">
           <div class="creations">CREATIONS</div>
           <div class="subtitle">
@@ -220,17 +219,23 @@
       </div>
         <div class="a-propos-moi">
           <div class="bulle">
-            <img class="a-propos-moi-img" src="/Images/me-removebg-preview.png" alt="">
-            <p>Moi</p>
+            <a href="/presentation.html">
+            <img class="a-propos-moi-img" src="/Images/me-removebg-previewok.png" alt="">
+          </a>
+            <p>En savoir plus sur moi</p>
           </div>
           <div class="bulle">
-            <img class="a-propos-moi-img" src="/Images/parcours-removebg-preview.png" alt="">
+            <a href="/presentation.html">
+            <img class="a-propos-moi-img-bis" src="/Images/parcours-removebgok-preview.png" alt="">
+          </a>
             
-            <p>Mon parcours</p>
+            <p>En savoir plus sur mon parcours</p>
           </div>
           <div class="bulle">
-            <img class="a-propos-moi-img" src="/Images/competences.webp" alt="">
-            <p>Mes compétences</p>
+            <a href="/presentation.html">
+            <img class="a-propos-moi-img" src="/Images/competences-removebg-preview.png" alt="">
+          </a>
+            <p>En savoir plus sur mes compétences</p>
           </div>
 
         </div>
@@ -345,6 +350,35 @@
       </section>
       
     </main>
+    <div class="trait"></div>
+
+    <section>
+      <div class="container-title">
+        <div class="creations">CONTACT</div>
+        <div class="subtitle">
+          <div class="my-creations">CONTACT</div>
+          <div class="small-creations">CONTACTEZ-MOI</div>
+        </div>
+      </div>
+      <FORM>
+        <div class="contact-form">
+          <div class="contact-form-left">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            <label for="sujet">Sujet</label>
+            <input type="text" id="sujet" name="sujet" required>
+          </div>
+          <div class="contact-form-right">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required></textarea>
+            <input type="submit" value="Envoyer">
+          </div>
+        </div>
+      </FORM>
+    </section>
+
     <div class="trait"></div>
 
     <footer>
