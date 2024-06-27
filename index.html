@@ -1,89 +1,51 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samir Ouahi - Portfolio</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="style.css" />
-    <link href="./dist/styles.css" rel="stylesheet">
-
-  </head>
-  <body>
-    
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script>
+        (function() {
+            emailjs.init("Ri2cfWs7J92ojf42M"); // Remplacez "YOUR_USER_ID" par votre Public Key EmailJS
+        })();
+    </script>
+</head>
+<body>
     <header>
-      
-  </div>
-      <div class="header-container">
-              
         <nav class="navbar">
-          <div class="nav-container">            
-            <div class="menu-items">
-              <a href="index.html">
-                <img
-                  class="logo-white"
-                  src="/Images/Noir/White.png"
-                  alt="Logo noir de Samir Ouahi"
-                />
-              </a>
-              <ul class="menu-list">
-                <li class="navprojets"><a class="links" href="#services">Mes services</a></li>
-                <li class="navprojets"><a class="links" href="#creations">Mes créations</a></li>
-                <li class="navpropos"><a class="links" href="#apropos">À propos</a></li>
-                <li class="navpropos"><a class="links" href="#tarifs">Tarifs</a></li>
-                <li class="navcontact"><a class="links" href="mailto:ouahi.samir37@gmail.com">Me contacter</a></li>
-              </ul>
+            <div class="nav-container">
+                <div class="menu-items">
+                    <a href="index.html">
+                        <img class="logo-white" src="/Images/Noir/Logo noir without background.png" alt="Logo noir de Samir Ouahi" />
+                    </a>
+                    <ul class="menu-list">
+                        <li class="navprojets"><a class="links" href="#services">Mes services</a></li>
+                        <li class="navprojets"><a class="links" href="#creations">Mes créations</a></li>
+                        <li class="navpropos"><a class="links" href="#apropos">À propos</a></li>
+                        <li class="navpropos"><a class="links" href="#tarifs">Tarifs</a></li>
+                        <li class="navcontact"><a class="links" href="#contact">Me contacter</a></li>
+                    </ul>
+                </div>
             </div>
-          </div>
         </nav>
-        
-      </div>
-      <div class="container">
+    </header>
+    <div class="container-fluid p-0">
         <img class="img-background" src="/Images/background1.png" alt="Devices Mockup">
         <div class="centered-text">
-          <p class="typing-effect samir">Samir OUAHI</p>
-          <p class="typing-effect dev">DEVELOPPEUR INFORMATIQUE </br>INDEPENDANT</p>          
+            <p class="typing-effect samir">Samir OUAHI</p>
+            <p class="typing-effect dev">DEVELOPPEUR INFORMATIQUE </br>INDEPENDANT</p>
         </div>
         <a href="#services" class="scroll-down">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 16L6 10L7.41 8.59L12 13.17L16.59 8.59L18 10L12 16Z" fill="currentColor"/>
-          </svg>
+          <i class="fa fa-angle-double-down"></i>
         </a>
-      </div>
     </div>
-    
-    <!-- <div class="content">
-      <div class="miros">
-        <h1>Bienvenue !</h1>
-        <p>
-          Vous pouvez voir mes plus belles <a class="qui-je-suis" href="pages-creations.html">créations</a> et découvrir
-          <a class="qui-je-suis" href="presentation.html">qui je suis</a>
-          <img class="moi" src="/Images/laptop wave.png" alt="" /></p>
-        </div>
-    </div> -->
-    
-    </header>
+
     <main>
-      <!-- <section class="zoom-fade-in"> -->
-      <!-- <div class="accroche"><p>
-        Bienvenue sur mon portfolio ! <br />
-        Vous pouvez voir mes plus belles <a class="qui-je-suis" href="pages-creations.html">créations</a> et découvrir
-        <a class="qui-je-suis" href="presentation.html">qui je suis</a>
-        <img class="moi" src="/Images/laptop wave.png" alt="" /></p>
-      </div> -->
-      <!-- <div class="coucou">
-        <button id="clic-button">
-          <img src="/Images/icons8-bonne-qualité-64.png" alt="" />
-        </button>
-        <p id="compteur"></p>
-      </div> -->
-
-     
-      
-
       <section id="services" class="services">
         <div class="container-title">
           <div class="creations">SERVICES</div>
@@ -92,43 +54,41 @@
             <div class="small-creations">SERVICES</div>
           </div>
         </div>
-       
-<div class="services-container">
-  <div class="services-box">
-    <img src="/Images/multiplatefromes.png" alt="">
-    <p>Multi - Platefromes</p>
-    <div class="text-hover">Compatible tous supports, desktop, tablette & mobile</div>
-  </div>
-  <div class="services-box">
-    <img src="/Images/4-removebg-preview.png" alt="">
-    <p>Développement web</p>
-    <div class="text-hover">Création de site web sur-mesure repondant aux besoins des clients</div>
-  </div>
-  <div class="services-box">
-    <img src="/Images/idées3.png" alt="">
-    <p>Projets web</p>
-    <div class="text-hover">Landing page, site vitrine, e-commerce, intranet, application web & mobile</div>
-  </div>
-  <div class="services-box">
-    <img src="/Images/seo.png" alt="">
-    <p>Référencement</p>
-    <div class="text-hover">CMS | Framework, code optimisé pour le référencement naturel</div>
-  </div>
-  <div class="services-box">
-    <img src="/Images/handshake.png" alt="">
-    <p>Accompagnement</p>
-    <div class="text-hover">Je gère entièrement les projets en assurant une communication constante</div>
-  </div>
-  <div class="services-box">
-    <img src="/Images/maintenance2.png" alt="">
-    <p>Maintenance web</p>
-    <div class="text-hover">Gestion d'hébérgement, garanti d'accessibilité, intégration régulière des mises à jour de sécurité</div>
-  </div>
-</div>
-
-</div>
-<div class="trait"></div>
+        <div class="services-container">
+          <div class="services-box">
+            <img src="/Images/multiplatefromes.png" alt="">
+            <p>Multi - Plateformes</p>
+            <div class="text-hover">Compatible tous supports, desktop, tablette & mobile</div>
+          </div>
+          <div class="services-box">
+            <img src="/Images/4-removebg-preview.png" alt="">
+            <p>Développement web</p>
+            <div class="text-hover">Création de site web sur-mesure répondant aux besoins des clients</div>
+          </div>
+          <div class="services-box">
+            <img src="/Images/idées3.png" alt="">
+            <p>Projets web</p>
+            <div class="text-hover">Landing page, site vitrine, e-commerce, intranet, application web & mobile</div>
+          </div>
+          <div class="services-box">
+            <img src="/Images/seo.png" alt="">
+            <p>Référencement</p>
+            <div class="text-hover">CMS | Framework, code optimisé pour le référencement naturel</div>
+          </div>
+          <div class="services-box">
+            <img src="/Images/handshake.png" alt="">
+            <p>Accompagnement</p>
+            <div class="text-hover">Je gère entièrement les projets en assurant une communication constante</div>
+          </div>
+          <div class="services-box">
+            <img src="/Images/maintenance2.png" alt="">
+            <p>Maintenance web</p>
+            <div class="text-hover">Gestion d'hébergement, garantie d'accessibilité, intégration régulière des mises à jour de sécurité</div>
+          </div>
+        </div>
+        <div class="trait"></div>
       </section>
+
       <section class="projets" id="creations">
         <div class="container-title">
           <div class="creations">CREATIONS</div>
@@ -199,45 +159,41 @@
             </div>
           </div>
         </div>
-        
       </section>
+
       <div class="plus-creations-container">
         <img class="img-background-creations" src="/Images/tutu.jpg" alt="">
         <a class="plus-creations" href="pages-creations.html"><p class="voir">voir + de créations</p></a>
-
       </div>
       <div class="trait"></div>
 
-         
-    <section id="apropos" class="h1-effet2">
-      <div class="container-title">
-        <div class="creations">A PROPOS</div>
-        <div class="subtitle">
-          <div class="my-creations">QUI SUIS-JE?</div>
-          <div class="small-creations">PRESENTATION</div>
+      <section id="apropos" class="h1-effet2">
+        <div class="container-title">
+          <div class="creations">A PROPOS</div>
+          <div class="subtitle">
+            <div class="my-creations">QUI SUIS-JE?</div>
+            <div class="small-creations">PRESENTATION</div>
+          </div>
         </div>
-      </div>
         <div class="a-propos-moi">
           <div class="bulle">
             <a href="/presentation.html">
-            <img class="a-propos-moi-img" src="/Images/me-removebg-previewok.png" alt="">
-          </a>
+              <img class="a-propos-moi-img" src="/Images/me-removebg-previewok.png" alt="">
+            </a>
             <p>En savoir plus sur moi</p>
           </div>
           <div class="bulle">
             <a href="/presentation.html">
-            <img class="a-propos-moi-img-bis" src="/Images/parcours-removebgok-preview.png" alt="">
-          </a>
-            
+              <img class="a-propos-moi-img-bis" src="/Images/parcours-removebgok-preview.png" alt="">
+            </a>
             <p>En savoir plus sur mon parcours</p>
           </div>
           <div class="bulle">
             <a href="/presentation.html">
-            <img class="a-propos-moi-img" src="/Images/competences-removebg-preview.png" alt="">
-          </a>
+              <img class="a-propos-moi-img" src="/Images/competences-removebg-preview.png" alt="">
+            </a>
             <p>En savoir plus sur mes compétences</p>
           </div>
-
         </div>
       </section>
       <div class="trait"></div>
@@ -250,19 +206,6 @@
             <div class="small-creations">OFFRES TARIFAIRES</div>
           </div>
         </div>
-        <!-- <div class="tarifs-container">
-          <div class="tarifs-box">
-            <p>SITE VITRINE STANDARD</p>
-        </div>
-        <div class="tarifs-box">
-          <p>SITE VITRINE PERSONNALISE</p>
-        </div>
-        <div class="tarifs-box">
-        <p>PLATEFORME E-COMMERCE</p>
-        </div>
-        <div class="tarifs-box">
-      <p>FORFAIT MAINTENANCE</p>
-        </div> -->
         <div class="pricing-container">
           <div class="pricing-box">
             <h2>SITE VITRINE STANDARD</h2>
@@ -348,11 +291,10 @@
           <p><strong>L'ensemble des tarifs indiqués sont H.T.</strong> * Prix à titre informatif : Changement possible selon les demandes et les choix du client. ** Estimation du temps de travail appuyé par un devis. *** Maintenance annuelle (engagement 12 mois). <strong>Droit d'auteur & propriété intellectuelle :</strong> Vous êtes à la fin du projet, propriétaire de l'ensemble des sources (fichiers) composant celui-ci. <strong>Paiement possible en plusieurs fois.</strong></p>
         </div>
       </section>
-      
     </main>
     <div class="trait"></div>
 
-    <section>
+    <section id="contact" class="contact-section">
       <div class="container-title">
         <div class="creations">CONTACT</div>
         <div class="subtitle">
@@ -360,45 +302,150 @@
           <div class="small-creations">CONTACTEZ-MOI</div>
         </div>
       </div>
-      <FORM>
-        <div class="contact-form">
-          <div class="contact-form-left">
-            <label for="nom">Nom</label>
-            <input type="text" id="nom" name="nom" required>
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-            <label for="sujet">Sujet</label>
-            <input type="text" id="sujet" name="sujet" required>
-          </div>
-          <div class="contact-form-right">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" required></textarea>
-            <input type="submit" value="Envoyer">
+      <div class="contacto">
+        <div class="questions-container">
+          <h2>N'hésitez pas à me contacter</h2>
+          <div class="icones">
+            <div class="tp">
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <i class="icone">📞</i>
+              <div class="tpp">
+                <p><strong>TÉLÉPHONE</strong><br>(+33) 6.27.64.86.38</p>
+              </div>
+            </div>
+            <div class="tp">
+              <i class="icone">✉️</i>
+              <div class="tpp">
+                <p><strong>E-MAIL</strong><br>ouahi.samir37@gmail.com</p>
+              </div>
+            </div>
+            <div class="tp">
+              <i class="icone">⏰</i>
+              <div class="tpp">
+                <p><strong>HORAIRES</strong><br>Lundi - Vendredi<br>09H00 - 18H00</p>
+              </div>
+            </div>
           </div>
         </div>
-      </FORM>
+        <div class="devis">
+          <h2>Une idée ? Un projet ? Demandez votre devis (gratuit)</h2> 
+          <div class="col-lg-12">
+            <form id="idFormDevis" class="contact-form">
+              <fieldset>
+                <div class="row">
+                  <div class="col-xs-12 col-md-6 col-lg-6">
+                    <h5 class="mini-titre">Vos coordonnées</h5>
+                    <hr>
+                    <div class="form-group input-group">
+                      <span class="input-group-addon"><i class="fa fa-user" aria-hidden="true"></i></span>
+                      <input type="text" name="nomDevis" class="form-control" placeholder="Nom / Prénom" autocomplete="off" required>
+                      <span class="input-group-addon">*</span>
+                    </div>
+                    <div class="form-group input-group col-xs-12 col-sm-12 col-md-12 col-lg-12 noPM">
+                      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noPM">
+                        <div class="i-checks">
+                          <input type="radio" id="idRadioP" name="typeUserDevis" value="Particulier" checked="">
+                          <label id="idRadioP_label" for="idRadioP">Particulier</label>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noPM">
+                        <div class="i-checks">
+                          <input type="radio" id="idRadioA" name="typeUserDevis" value="Association">
+                          <label id="idRadioA_label" for="idRadioA">Association</label>
+                        </div>
+                      </div>
+                      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 noPM">
+                        <div class="i-checks">
+                          <input type="radio" id="idRadioS" name="typeUserDevis" value="Société">
+                          <label id="idRadioS_label" for="idRadioS">Société</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="blocEnseigne" class="form-group input-group" style="display: none;">
+                      <input type="text" name="enseigneDevis" class="form-control" autocomplete="off" placeholder="Nom de l'association">
+                      <span class="input-group-addon">*</span>
+                    </div>
+                    <div class="form-group input-group">
+                      <span class="input-group-addon"><i class="fa fa-at" aria-hidden="true"></i></span>
+                      <input type="email" name="emailDevis" class="form-control" placeholder="E-mail" autocomplete="off" required>
+                      <span class="input-group-addon">*</span>
+                    </div>
+                    <div class="form-group input-group">
+                      <span class="input-group-addon"><i class="fa fa-phone" aria-hidden="true"></i></span>
+                      <input type="text" name="telDevis" class="form-control" placeholder="Téléphone" autocomplete="off">
+                    </div>
+                    <div class="form-group input-group">
+                      <span class="input-group-addon"><i class="fa fa-link" aria-hidden="true"></i></span>
+                      <input type="text" name="urlDevis" class="form-control" placeholder="Adresse site internet (si existant)" autocomplete="off">
+                    </div>
+                    <div class="i-checks">
+                      <div class="form-check">
+                        <input type="checkbox" id="idChkRGPDDevis" name="chkRGPDDevis" value="1" class="form-check-input" required>
+                        <label class="form-check-label" for="idChkRGPDDevis">En soumettant ce formulaire, j'accepte que les informations saisies soient exploitées dans le cadre de la demande de devis et de la relation commerciale qui peut en découler.</label>
+                      </div>
+                    </div>
+                    <div class="form-group input-group">
+                      <span class="input-group-addon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                      <input type="text" name="captchaDevis" class="form-control" placeholder="5 + 4 = ?" autocomplete="off" required>
+                      <span class="input-group-addon">*</span>
+                    </div>
+                    <div class="msgFormDevis">
+                      <p class="alert alert-info">
+                        <i class="fa fa-info-circle" aria-hidden="true"></i>
+                        <b>Demande de devis gratuit.</b> Réponse moyenne sous 72h.<br>
+                        Merci de détailler au maximum votre projet pour une réponse précise.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-xs-12 col-md-6 col-lg-6">
+                    <h5 class="mini-titre">Votre projet</h5>
+                    <hr>
+                    <div class="form-group input-group select-input-group">
+                      <select name="typeProjetDevis" class="form-control" required>
+                        <option value="" selected="" disabled="">Type de projet</option>
+                        <option value="Site vitrine standard">Site vitrine Standard</option>
+                        <option value="Site vitrine personnalisé">Site vitrine Personnalisé</option>
+                        <option value="Plateforme e-commerce">Plateforme e-commerce</option>
+                        <option value="Autre">Autre</option>
+                      </select>
+                      <span class="input-group-addon noBorder">*</span>
+                    </div>
+                    <div class="form-group input-group">
+                      <textarea class="form-control textarea-size txtArea_big" cols="30" rows="10" name="descDevis" placeholder="Description de votre projet... Merci de détailler le plus possible votre besoin afin de faciliter nos futurs échanges." required></textarea>
+                      <span class="input-group-addon">*</span>
+                    </div>
+                    <div class="form-group text-right">
+                      <button type="submit" class="btn btn-f-info" id="idBtnDevis" name="btnDevis">
+                        <i class="fa fa-paper-plane" aria-hidden="true"></i>&nbsp;&nbsp;Envoyer ma demande de devis
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+        </div>
+      </div>
     </section>
 
     <div class="trait"></div>
 
     <footer>
-      
       <div id="adress">
         <div class="contactMail">
-        <p>
-          Un projet ? Une simple envie de me parler ? Pas de problème ! </br>
-          Vous pouvez me joindre par email en cliquant sur l'icône ci-dessous :</br>
-          <a href="mailto:votreadressemail@example.com"><i class="fa fa-envelope-o"></i></a></br>
-          
-        </p>
-      </div>
-      <div id="icons">
-        <p>Retrouvez-moi également sur  :</br></p>
-        <div>
-        <a href="https://www.linkedin.com/in/samir-ouahi/"><i class="fa fa-linkedin"></i></a>
-        <a href="https://github.com/SamirOuahi"><i class="fa fa-github"></i></a>
-      </div>
-      </div>
+          <p>
+            Un projet ? Une simple envie de me parler ? Pas de problème ! </br>
+            Vous pouvez me joindre par email en cliquant sur l'icône ci-dessous :</br>
+            <a href="mailto:votreadressemail@example.com"><i class="fa fa-envelope-o"></i></a></br>
+          </p>
+        </div>
+        <div id="icons">
+          <p>Retrouvez-moi également sur :</br></p>
+          <div>
+            <a href="https://www.linkedin.com/in/samir-ouahi/"><i class="fa fa-linkedin"></i></a>
+            <a href="https://github.com/SamirOuahi"><i class="fa fa-github"></i></a>
+          </div>
+        </div>
       </div>
       <div id="copyrighht-container">
         <span id="copyright">© SO Creation, 2024</span>
@@ -406,7 +453,8 @@
     </footer>
     <a href="#" class="back-to-top">
       <img src="/Images/flèche haut.png" alt="Flèche vers le haut">
-  </a>
+    </a>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="script.js"></script>
   </body>
 </html>

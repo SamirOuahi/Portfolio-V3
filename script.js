@@ -1,47 +1,6 @@
-document.addEventListener("DOMContentLoaded", function () {
-  // Citations
-  let currentSlide = 0;
-  const slides = document.querySelectorAll(".quote-slide");
-  const totalSlides = slides.length;
-
-  function showSlide(index) {
-    slides.forEach((slide, i) => {
-      slide.style.display = i === index ? "block" : "none";
-    });
-  }
-
-  function nextSlide() {
-    currentSlide = (currentSlide + 1) % totalSlides;
-    showSlide(currentSlide);
-  }
-
-  showSlide(currentSlide);
-  setInterval(nextSlide, 5000); // Change de citation toutes les 7 secondes
-
-  // Compteur de likes
-  //     const bouton = document.getElementById('clic-button');
-  // const compteur = document.getElementById('compteur');
-  // let nombreDeClics = 0;
-
-  // Vérifie si le nombre de clics est déjà enregistré dans le localStorage
-  if (localStorage.getItem("nombreDeClics")) {
-    nombreDeClics = parseInt(localStorage.getItem("nombreDeClics"));
-    compteur.textContent = nombreDeClics;
-  }
-
-  bouton.addEventListener("click", () => {
-    nombreDeClics++;
-    compteur.textContent = `${nombreDeClics}`;
-
-    // Enregistre le nombre de clics dans le localStorage
-    localStorage.setItem("nombreDeClics", nombreDeClics);
-  });
-});
-
 // Sélection de la flèche
 const backToTopButton = document.querySelector(".back-to-top");
 
-// Fonction pour vérifier le défilement et afficher/masquer la flèche
 window.addEventListener("scroll", () => {
   if (window.scrollY > 200) {
     backToTopButton.style.display = "flex";
@@ -50,40 +9,31 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// Fonction pour retourner en haut lorsque la flèche est cliquée
 backToTopButton.addEventListener("click", (e) => {
-  e.preventDefault(); // Empêche le comportement par défaut du lien
-
-  const scrollStep = -window.scrollY / (500 / 15); // Calcul de la vitesse de défilement
+  e.preventDefault();
+  const scrollStep = -window.scrollY / (500 / 15);
   const scrollInterval = setInterval(() => {
     if (window.scrollY !== 0) {
       window.scrollBy(0, scrollStep);
     } else {
       clearInterval(scrollInterval);
     }
-  }, 15); // Interval de temps en ms pour le défilement
+  }, 15);
 });
 
-// Fonction pour détecter si un élément est visible dans la fenêtre
 function elementIsVisible(el) {
   var rect = el.getBoundingClientRect();
   var windowHeight =
     window.innerHeight || document.documentElement.clientHeight;
-
-  // Calculer la position à partir du haut de la fenêtre
-  var triggerPosition = windowHeight / 1; // Déclenchement lorsque l'élément est à mi-chemin dans la fenêtre
-
-  return rect.top <= triggerPosition;
+  return rect.top <= windowHeight * 0.75;
 }
 
-// Fonction pour activer l'animation lorsque les éléments deviennent visibles
 function activateAnimations() {
   var elementsDroite = document.querySelectorAll(".cadre-droite");
   var elementsGauche = document.querySelectorAll(".cadre-gauche");
   var elementsH1Effet = document.querySelectorAll(".h1-effet");
   var elementsH1Effet2 = document.querySelectorAll(".h1-effet2");
 
-  // Activer animation pour .cadre-droite et .cadre-gauche
   elementsDroite.forEach(function (el) {
     if (elementIsVisible(el)) {
       el.classList.add("animate-slide");
@@ -96,14 +46,12 @@ function activateAnimations() {
     }
   });
 
-  // Activer animation pour .h1-effet
   elementsH1Effet.forEach(function (el) {
     if (elementIsVisible(el)) {
       el.classList.add("animate-slide");
     }
   });
 
-  // Activer animation pour .h1-effet2
   elementsH1Effet2.forEach(function (el) {
     if (elementIsVisible(el)) {
       el.classList.add("animate-slide");
@@ -111,31 +59,72 @@ function activateAnimations() {
   });
 }
 
-// Fonction pour détecter si un élément est visible dans la fenêtre
-function elementIsVisible(el) {
-  var rect = el.getBoundingClientRect();
-  var windowHeight =
-    window.innerHeight || document.documentElement.clientHeight;
-  return rect.top <= windowHeight * 0.75; // Apparaît lorsque l'élément est à 75% de la hauteur de la fenêtre
-}
-
-// Écouteur d'événement pour déclencher l'activation de l'animation au scroll
 window.addEventListener("scroll", activateAnimations);
-
-// Activation initiale au chargement de la page
-activateAnimations();
-
-// Écouteur d'événement pour déclencher l'activation de l'animation au scroll
-window.addEventListener("scroll", activateAnimations);
-
-// Activation initiale au chargement de la page
 activateAnimations();
 
 document.querySelectorAll(".scroll-down, .links").forEach(function (element) {
   element.addEventListener("click", function (event) {
     event.preventDefault();
-    document.querySelector(this.getAttribute("href")).scrollIntoView({
+    const targetId = this.getAttribute("href").substring(1);
+    const targetElement = document.getElementById(targetId);
+    const offset = -100; // Adjust this value as needed to stop above the title
+    const targetPosition =
+      targetElement.getBoundingClientRect().top + window.pageYOffset + offset;
+    window.scrollTo({
+      top: targetPosition,
       behavior: "smooth",
     });
+  });
+});
+
+$(document).ready(function () {
+  $('input[name="typeUserDevis"]').on("change", function () {
+    var value = $(this).val();
+    if (value == "Association" || value == "Société") {
+      $('input[name="enseigneDevis"]').parent().show();
+      $('input[name="enseigneDevis"]').attr(
+        "placeholder",
+        value == "Association" ? "Nom de l'association" : "Nom de l'entreprise"
+      );
+    } else {
+      $('input[name="enseigneDevis"]').parent().hide();
+    }
+  });
+
+  $("#idFormDevis").on("submit", function (event) {
+    event.preventDefault();
+
+    var captcha = $('input[name="captchaDevis"]').val();
+    if (captcha != "9") {
+      alert("Erreur : CAPTCHA incorrect.");
+      return;
+    }
+
+    var formData = {
+      nomDevis: $('input[name="nomDevis"]').val(),
+      typeUserDevis: $('input[name="typeUserDevis"]:checked').val(),
+      enseigneDevis: $('input[name="enseigneDevis"]').val(),
+      emailDevis: $('input[name="emailDevis"]').val(),
+      telDevis: $('input[name="telDevis"]').val(),
+      urlDevis: $('input[name="urlDevis"]').val(),
+      typeProjetDevis: $('select[name="typeProjetDevis"]').val(),
+      descDevis: $('textarea[name="descDevis"]').val(),
+      consent: $('input[name="chkRGPDDevis"]').is(":checked") ? "Oui" : "Non",
+    };
+
+    console.log("Form Data: ", formData);
+
+    emailjs.send("service_2z1zata", "template_1gcok2i", formData).then(
+      function (response) {
+        console.log("EmailJS Response: ", response);
+        alert("Votre demande de devis a été envoyée avec succès.");
+      },
+      function (error) {
+        console.error("EmailJS Error: ", error);
+        alert(
+          "Une erreur s'est produite lors de l'envoi de votre demande de devis. Veuillez réessayer."
+        );
+      }
+    );
   });
 });
