@@ -1,16 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@700&display=swap');
 
 :root {
   --background-color-light: #f5f5f5;
   --text-color: #333;
   --highlight-color: #007bff;
-  --font-family: "Quicksand", sans-serif;
+  --font-family: 'Quicksand', sans-serif;
 }
 
 body {
-  padding: 0 5em;
   background-color: var(--background-color-light);
   overflow-x: hidden;
   font-family: var(--font-family);
@@ -19,18 +18,18 @@ body {
 /**** Logo ****/
 
 .logo-black {
-  margin-top: 40px;
-  margin-left: 10px;
-  width: 100px;
-  height: auto;
-  transition: transform 0.3s ease-in-out;
-  position: absolute;
-  z-index: 2;
+  margin-top: -9em;
+  margin-left: 1.8em;
+  width: 80px !important;
+  font-size: 1.5rem !important;
+  display: flex !important;
+  position: fixed;
+  z-index: 10;
 }
 
 .logo-black:hover {
-  transform: scale(1.1);
-  cursor: pointer;
+  color: #000000 !important;
+  cursor: pointer !important;
 }
 
 /**** Texte défilant ****/
@@ -97,16 +96,86 @@ body {
 
 .myphoto {
   width: 50%;
-  margin-left: 8em;
+  margin-left: 25em;
+  margin-top: 3em;
 }
 
 .moi {
-  width: 50%;
+  width: 80%;
+}
+
+.container-title {
+  margin-top: 15em;
+  margin-bottom: 5em;
+  width: 100%;
+  height: 5em;
+  /* background-color: brown; */
+  display: flex;
+}
+
+.container-title2 {
+  /* margin-top: 15em; */
+  margin-bottom: 5em;
+  margin-left: 3em;
+  width: 100%;
+  height: 5em;
+  /* background-color: brown; */
+  display: flex;
+}
+
+.container-title3 {
+  /* margin-top: 15em; */
+  margin-bottom: 5em;
+  margin-left: 13em;
+  width: 100%;
+  height: 5em;
+  /* background-color: brown; */
+  display: flex;
+}
+
+.creations {
+  width: 55%;
+  height: 100%;
+  font-size: 5em;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  color: rgb(234, 234, 234);
+  margin-right: 0.3em;
+  font-family: Montserrat;
+  font-weight: bold;
+  /* background-color: yellow; */
+}
+
+.subtitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+  /* color: green; */
+}
+
+.my-creations {
+  display: flex;
+  font-family: Montserrat;
+  color: rgb(194, 194, 194);
+  font-size: 0.8em;
+  /* background-color: aqua; */
+}
+
+.small-creations {
+  font-size: 1.5em;
+  font-family: Montserrat;
+  font-weight: bold;
+
+  /* background-color: blanchedalmond; */
 }
 
 .content > p {
+  margin-top: 10em;
   max-width: 700px;
   line-height: 1.9rem;
+  margin: auto;
 }
 
 /**** Parcours ****/
